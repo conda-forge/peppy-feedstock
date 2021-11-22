@@ -1,0 +1,13 @@
+diff --git a/peppy/project.py b/peppy/project.py
+index e1f187d..3e27b38 100644
+--- a/peppy/project.py
++++ b/peppy/project.py
+@@ -2,7 +2,7 @@
+ Build a Project object.
+ """
+ import os
+-from collections import Mapping
++from collections.abc import Mapping
+ from logging import getLogger
+ 
+ import pandas as pd
