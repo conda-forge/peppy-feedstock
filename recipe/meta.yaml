@@ -9,11 +9,11 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2f8b19ca3e034afea77aa11d2b8d30982adc4b0ce44bae6d8ecd5cf0da0af002
   patches:
-    # Can be removed once 0.32 is out.
+    # Patch can be removed once 0.32 is out.
     - 0001-Python-3.10-compat.patch
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 

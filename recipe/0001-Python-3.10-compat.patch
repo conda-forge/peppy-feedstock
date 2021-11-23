@@ -11,3 +11,16 @@ index e1f187d..3e27b38 100644
  from logging import getLogger
  
  import pandas as pd
+diff --git a/peppy/sample.py b/peppy/sample.py
+index 590df56..683727a 100644
+--- a/peppy/sample.py
++++ b/peppy/sample.py
+@@ -106,8 +106,6 @@ class Sample(PathExAttMap):
+             :param str name: name of the object to represent.
+             :param Iterable[str] to_skip: names of attributes to ignore.
+             """
+-            from collections import Mapping
+-
+             from attmap import AttMap
+             from pandas import Series, isnull
+ 
