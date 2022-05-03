@@ -1,5 +1,5 @@
 {% set name = "peppy" %}
-{% set version = "0.31.2" %}
+{% set version = "0.32.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2f8b19ca3e034afea77aa11d2b8d30982adc4b0ce44bae6d8ecd5cf0da0af002
+  sha256: 9ad28db509b3223353e79e981faead832140b9096223b5c4f8ecf58dd561aaba
   patches:
     # Patch can be removed once 0.32 is out.
     - 0001-Python-3.10-compat.patch
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
