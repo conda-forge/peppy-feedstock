@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5e3ddce8b5ef70bdf81e2839d5429bee267549265c07e0618469fe70a716e8ea
+  sha256: 0
 
 build:
   number: 0
@@ -17,15 +17,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
-    - attmap >=0.12.5
-    - python >=3.6
+    - python >=3.8
     - pyyaml >=5
     - ubiquerg >=0.5.2
     - pandas >=0.24.2
     - logmuse >=0.2
     - rich
+    - pephubclient >=0.4.2
 
 test:
   imports:
@@ -41,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - stolarczyk
+    - khoroshevskyi
