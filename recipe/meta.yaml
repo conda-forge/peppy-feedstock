@@ -10,22 +10,23 @@ source:
   sha256: 5e3ddce8b5ef70bdf81e2839d5429bee267549265c07e0618469fe70a716e8ea
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
+    - setuptools >=75.1.0
   run:
-    - attmap >=0.12.5
-    - python >=3.6
+    - python >=3.8
     - pyyaml >=5
     - ubiquerg >=0.5.2
     - pandas >=0.24.2
     - logmuse >=0.2
     - rich
+    - pephubclient >=0.4.2
 
 test:
   imports:
@@ -41,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - stolarczyk
+    - khoroshevskyi
