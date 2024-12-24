@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5e3ddce8b5ef70bdf81e2839d5429bee267549265c07e0618469fe70a716e8ea
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=75.1.0
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pyyaml >=5
     - ubiquerg >=0.5.2
     - pandas >=0.24.2
@@ -29,6 +29,8 @@ requirements:
     - pephubclient >=0.4.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - peppy
 
