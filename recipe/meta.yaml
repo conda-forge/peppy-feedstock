@@ -1,5 +1,5 @@
 {% set name = "peppy" %}
-{% set version = "0.40.7" %}
+{% set version = "0.40.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5e3ddce8b5ef70bdf81e2839d5429bee267549265c07e0618469fe70a716e8ea
+  sha256: 2dcfe8e348130e94570340e2dfc96ce672d8af78c8ae97e21f2b0afe22ce2a8a
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
